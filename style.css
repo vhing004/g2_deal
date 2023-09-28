@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+body {
+  --color-title: #252530;
+  --color-list: #505059;
+  --color-focus: #ff492c;
+}
+.software {
+  max-width: 1300px;
+  margin-top: 100px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+.software-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.software-left {
+  max-width: 530px;
+  width: 100%;
+}
+.software-title {
+  max-width: 470px;
+  font-weight: 700;
+  color: var(--color-title);
+  font-size: 32px;
+  margin-bottom: 24px;
+  line-height: calc(45 / 32);
+}
+.nav-link {
+  padding: 6px 12px;
+  font-size: 16px;
+  color: var(--color-list);
+  font-weight: 600;
+  max-width: 470px;
+  width: 100%;
+  border: 2px solid #fff;
+}
+.nav-link:hover {
+  color: var(--color-list);
+}
+.nav-link:focus {
+  border: 2px solid;
+  border-color: var(--color-focus);
+  color: var(--color-focus);
+}
+.software-content {
+  max-width: 740px;
+  width: 100%;
+}
+.tab-pane .software-more1 {
+  display: block;
+  color: var(--color-focus);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.6px;
+  text-align: right;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.software-more {
+  display: none;
+}
+.software-lists {
+  display: grid;
+  grid-gap: 26px;
+  grid-template-columns: repeat(3, 225px);
+  grid-template-rows: repeat(3, 1fr);
+}
+.software-item {
+  width: 225px;
+  max-width: 100%;
+  height: 165px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #fff;
+}
+.software-name {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 3px;
+}
+.software-feedback {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.software-rate {
+  color: var(--color-focus);
+  font-size: 15px;
+}
+.software-number {
+  font-size: 12px;
+  content: var(--color-list);
+}
+.software-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.software-img img {
+  width: 90px;
+  height: 80px;
+  object-fit: contain;
+}
+@media screen and (max-width: 1100px) {
+  .software-title {
+    font-size: 28px;
+  }
+  .software-lists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .software-item {
+    max-width: 200px;
+  }
+  .software-item:last-child {
+    display: none;
+  }
+  .software-item:nth-child(8) {
+    display: none;
+  }
+  .software-item:nth-child(7) {
+    display: none;
+  }
+}
+@media screen and (max-width: 770px) {
+  .software-container {
+    max-width: 750px;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .software-left {
+    max-width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .software-inner {
+    display: flex;
+    max-width: 360px;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .software-title {
+    font-size: 22px;
+    text-align: center;
+  }
+  .software-list {
+    max-width: 260px;
+    width: 100%;
+    margin-left: auto;
+  }
+  .nav-link {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .nav-item:nth-child(7) {
+    display: none;
+  }
+  .nav-item:nth-child(8) {
+    display: none;
+  }
+  .nav-item:nth-child(9) {
+    display: none;
+  }
+  .nav-item:nth-child(6) {
+    display: none;
+  }
+  .nav-item:nth-child(5) {
+    display: none;
+  }
+  .software-lists {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-gap: 20px;
+  }
+  .tab-pane .software-more1 {
+    display: none;
+  }
+  .software-more {
+    display: block;
+    color: var(--color-focus);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.6px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .software-img img {
+    width: 70px;
+    height: 60px;
+  }
+  .software-item {
+    max-width: 180px;
+    width: 100%;
+    height: 140px;
+  }
+  .software-more {
+    margin-top: -150px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .software-lists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .software-content {
+    max-width: 550px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .software-more {
+    margin-top: 10px;
+  }
+  .software-item {
+    width: 300px;
+  }
+}
